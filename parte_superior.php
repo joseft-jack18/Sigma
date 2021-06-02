@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Elite Hospital Admin Template - Hospital admin dashboard web app kit</title>
+    <title>Sistema de Liquidaciones - Sigma</title>
 
     <!-- chartist CSS -->
     <link href="assets/node_modules/morrisjs/morris.css" rel="stylesheet">
@@ -53,7 +53,7 @@
                     <ul class="navbar-nav my-lg-0">
                         
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Mark &nbsp;<i class="mdi mdi-chevron-down"></i></span> </a>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class=""> <span class="hidden-md-down">Jose Quispe &nbsp;<i class="mdi mdi-chevron-down"></i></span> </a>
                             <div class="dropdown-menu dropdown-menu-right animated flipInY">
                                 <!-- text-->
                                 <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
