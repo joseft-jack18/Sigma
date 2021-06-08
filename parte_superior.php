@@ -90,7 +90,7 @@
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
           <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="fas fa-user-circle"></i> <?php echo $_SESSION['nom_usuario']; ?>
+            <i class="fas fa-user-circle"></i> <b> <?php echo $_SESSION['nom_usuario']; ?> </b>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
             <a href="#" class="dropdown-item">
