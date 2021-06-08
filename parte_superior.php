@@ -14,6 +14,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="dist/img/logoEntrada.png">
   <title>Sistema de Liquidacion | Sigma</title>
 
   <!-- Google Font: Source Sans Pro -->
