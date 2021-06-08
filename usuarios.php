@@ -1,4 +1,5 @@
 <?php require_once "parte_superior.php"; ?>
+<?php include("modal/modal_usuario.php"); ?>
 
 
     <!-- Content Wrapper. Contains page content -->
@@ -18,7 +19,7 @@
                                     </div>
 
                                     <div class="col-sm-2">
-                                        <button type="button" class="btn btn-outline-info btn-block btn-flat">
+                                        <button type="button" class="btn btn-outline-info btn-block btn-flat" onclick="nuevo_registro()" data-toggle="modal" data-target="#modal_usuario">
                                             <i class="fas fa-plus"></i> Nuevo Usuario
                                         </button>
                                     </div>

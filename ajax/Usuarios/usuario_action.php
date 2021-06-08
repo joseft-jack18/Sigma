@@ -28,7 +28,7 @@
 
                         $id = $row['id'];
                         $nombres = $row['ape_paterno']." ".$row['ape_materno']." ".$row['nombres'];
-                        $cod_usuario = $row['ape_paterno'];
+                        $cod_usuario = $row['usuario'];
                         $tipo = $row['tipo'];
                         $estado = $row['estado'];
 
@@ -40,22 +40,19 @@
                         <td><?php echo utf8_encode($cod_usuario); ?></td>
                         <td class="text-center"><?php echo utf8_encode($tipo); ?></td>
                         <td class="text-center"><?php if($estado == 'A'){ echo "ACTIVO"; } else { echo "INACTIVO"; } ?></td>
-                        <td class="text-center"> 
-                            <a href="#">
-                                <button type="button" class="btn waves-effect waves-light btn-info  mb-1">
-                                    <i class="fas fa-edit"></i> 
-                                </button>
-                            </a>                                       
-                            <a href="#">
-                                <button type="button" class="btn waves-effect waves-light btn-success  mb-1">
-                                    <i class="fas fa-check"></i>
-                                </button>
-                            </a>  
-                            <a href="#">
-                                <button type="button" class="btn waves-effect waves-light btn-danger  mb-1">
-                                    <i class="fas fa-ban"></i> 
-                                </button>
-                            </a>               
+                        <td class="text-center">
+                            <button type="button" class="btn waves-effect waves-light btn-info  mb-1" onclick="editar_registro(<?php echo $id; ?>)" data-toggle="modal" data-target="#modal_usuario">
+                                <i class="fas fa-edit"></i> 
+                            </button>      
+                            <?php if($estado == 'I') { ?> 
+                            <button type="button" class="btn waves-effect waves-light btn-success  mb-1" onclick="editar_estado(<?php echo $id; ?>,'I')">
+                                <i class="fas fa-check"></i>
+                            </button>
+                            <?php } else {?> 
+                            <button type="button" class="btn waves-effect waves-light btn-danger  mb-1" onclick="editar_estado(<?php echo $id; ?>,'A')">
+                                <i class="fas fa-ban"></i> 
+                            </button>
+                            <?php } ?>              
                         </td>                                            
                     </tr>
 
@@ -73,7 +70,7 @@
 $(document).ready(function() {
     $('#example').DataTable({
         "scrollX": true,
-        "info": false,
+        "info": true,
         "lengthChange": false,
         "language": {
             "sProcessing": "Procesando...",

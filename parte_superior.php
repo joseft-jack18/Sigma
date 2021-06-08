@@ -1,6 +1,8 @@
 <?php
 
     session_start();
+    date_default_timezone_set('America/Lima'); 
+    
     if(empty($_SESSION['user_login_status'])){
         header ('Location: login.php');
     }
@@ -34,6 +36,8 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- Toastr -->
+  <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

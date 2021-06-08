@@ -1,6 +1,8 @@
 <?php
 
     session_start();
+    date_default_timezone_set('America/Lima'); 
+    
     if(!empty($_SESSION['user_login_status'])){
         header ('Location: index.php');
     }
