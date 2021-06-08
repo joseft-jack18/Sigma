@@ -6,8 +6,8 @@
     $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 
     if($action == 'ajax'){
-        $sql = "SELECT $Table FROM $InnerJoin WHERE $Where ORDER BY A.FEC_ATENCION DESC";
-        $query = sqlsrv_query($conn, $sql);
+        $sql = "SELECT * FROM mae_usuario";
+        $query = mysqli_query($conn, $sql);
 
 ?>
     
@@ -15,46 +15,42 @@
             <table id="example" class="display" style="width:100%">
                 <thead>
                     <tr>
-                        <th class="text-center">Fecha Cita</th>
-                        <th class="text-center">DNI</th>
-                        <th class="text-center">Paciente</th>
-                        <th class="text-center">Médico</th>
-                        <th class="text-center">Especialidad</th>
+                        <th class="text-center">#</th>
+                        <th class="text-center">Nombres</th>
+                        <th class="text-center">Usuario</th>
+                        <th class="text-center">Tipo</th>
+                        <th class="text-center">Estado</th>
                         <th class="text-center">Acciones</th>                                  
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while ($row = sqlsrv_fetch_array($query)){
-                        $cod_atencion = $row['COD_ATENCION'];
-                        $fec_atencion = $row['FEC_ATENCION'];
-                        $fec_atencion = $fec_atencion->format('d-m-Y');
-                        $dni = $row['NUM_HC'];
-                        $paciente = utf8_encode($row['APATERNO'].' '.$row['AMATERNO'].' '.$row['NOMBRE']);
-                        $medico = utf8_encode($row['MEDICO']);
-                        $especialidad = utf8_encode($row['DES_ESPECIALIDAD']);
-                        $estado = $row['ESTADO_TRIAJE'];
+                    <?php while ($row = mysqli_fetch_array($query)){
+
+                        $id = $row['id'];
+                        $nombres = $row['ape_paterno']." ".$row['ape_materno']." ".$row['nombres'];
+                        $cod_usuario = $row['ape_paterno'];
+                        $tipo = $row['tipo'];
+                        $estado = $row['estado'];
+
                     ?>                                         
                                     
                     <tr>
-                        <td class="text-center"><?php echo $fec_atencion; ?></td>
-                        <td class="text-center"><?php echo $dni; ?></td>
-                        <td><?php echo $paciente; ?></td>
-                        <td><?php echo $medico; ?></td>
-                        <td><?php echo $especialidad; ?></td>
+                        <td class="text-center"><?php echo $id; ?></td>
+                        <td><?php echo utf8_encode($nombres); ?></td>
+                        <td><?php echo utf8_encode($cod_usuario); ?></td>
+                        <td class="text-center"><?php echo utf8_encode($tipo); ?></td>
+                        <td class="text-center"><?php if($estado == 'A'){ echo "ACTIVO"; } else { echo "INACTIVO"; } ?></td>
                         <td class="text-center"> 
-                            <?php if($estado == 1) { ?>
-                            <a href="nuevo_triaje.php?cod_atencion=<?php echo $cod_atencion; ?>">
+                            <a href="#">
                                 <button type="button" class="btn waves-effect waves-light btn-warning  mb-1">
                                     <i class="mdi mdi-pencil"></i> Editar
                                 </button>
-                            </a>
-                            <?php } else {?>                                        
-                            <a href="nuevo_triaje.php?cod_atencion=<?php echo $cod_atencion; ?>">
+                            </a>                                       
+                            <a href="#">
                                 <button type="button" class="btn waves-effect waves-light btn-success  mb-1">
                                     <i class="fas fa-check"></i> Atender
                                 </button>
-                            </a>
-                            <?php } ?>                
+                            </a>               
                         </td>                                            
                     </tr>
 

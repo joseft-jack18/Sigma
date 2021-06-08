@@ -3,10 +3,9 @@ $(document).ready(function(){
 });
 
 function load(page){     
-    var dni = $("#dni").val();
     $("#loader").fadeIn('slow');
     $.ajax({
-        url:'./ajax/registrar_triaje_action.php?action=ajax&page='+page+'&dni='+dni,
+        url:'./ajax/Usuarios/usuario_action.php?action=ajax&page='+page,
         beforeSend: function(objeto){
             $('#loader').html('<img src="./img/ajax-loader.gif"> Cargando...');
         },

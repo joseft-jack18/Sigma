@@ -40,3 +40,4 @@
 
 
 <?php require_once "parte_inferior.php"; ?>
+<script src="js/usuarios.js"></script>
