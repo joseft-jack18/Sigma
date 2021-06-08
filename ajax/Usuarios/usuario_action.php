@@ -42,13 +42,18 @@
                         <td class="text-center"><?php if($estado == 'A'){ echo "ACTIVO"; } else { echo "INACTIVO"; } ?></td>
                         <td class="text-center"> 
                             <a href="#">
-                                <button type="button" class="btn waves-effect waves-light btn-warning  mb-1">
-                                    <i class="mdi mdi-pencil"></i> Editar
+                                <button type="button" class="btn waves-effect waves-light btn-info  mb-1">
+                                    <i class="fas fa-edit"></i> 
                                 </button>
                             </a>                                       
                             <a href="#">
                                 <button type="button" class="btn waves-effect waves-light btn-success  mb-1">
-                                    <i class="fas fa-check"></i> Atender
+                                    <i class="fas fa-check"></i>
+                                </button>
+                            </a>  
+                            <a href="#">
+                                <button type="button" class="btn waves-effect waves-light btn-danger  mb-1">
+                                    <i class="fas fa-ban"></i> 
                                 </button>
                             </a>               
                         </td>                                            
