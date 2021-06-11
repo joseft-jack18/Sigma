@@ -13,8 +13,15 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="row">
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-3">
                                         <h3 class="m-1">PDF</h3>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="form-group">
+                                            <label for="txt_file">Example file input</label>
+                                            <input type="file" class="form-control-file" id="txt_file">
+                                        </div>
                                     </div>
 
                                     <div class="col-sm-2">
@@ -33,9 +40,16 @@
 
 
 <?php require_once "parte_inferior.php"; ?>
-<script src="js/VentanaCentrada.js"></script>
 <script>
     function cargar_pdf(){
-        VentanaCentrada('./pdf/documentos/ver_formato.php','Formato','','1024','768','true');
+        var file = $('#txt_file').val();
+        $.ajax({
+            url: 'prueba2.php',
+            type: 'POST',
+            data: { file: file },
+            success: function(resp){
+                alert(resp);
+            }
+        });
     }
 </script>
