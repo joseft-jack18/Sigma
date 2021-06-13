@@ -6,7 +6,7 @@
     $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
 
     if($action == 'ajax'){
-        $sql = "SELECT * FROM mae_usuario";
+        $sql = "SELECT * FROM mae_usuario ORDER BY usuario";
         $query = mysqli_query($conn, $sql);
 
 ?>

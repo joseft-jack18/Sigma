@@ -68,3 +68,15 @@ function editar_registro(id){
         }
     });
 }
+
+function editar_estado(id,estado){
+    $.ajax({
+        url: './ajax/Tarifario/editar_estado.php',
+        type: 'POST',
+        data: { id: id, estado: estado },
+        success: function(resp){
+            toastr.success(resp);
+            load(1);
+        }
+    });
+}

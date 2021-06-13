@@ -3,7 +3,7 @@
     session_start();
     require_once "../../config/conexion.php";
 
-    $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] !=NULL)?$_REQUEST['action']:'';
+    $action = (isset($_REQUEST['action'])&& $_REQUEST['action'] != NULL)?$_REQUEST['action']:'';
 
     if($action == 'ajax'){
         $sql = "SELECT * FROM mae_tarifario ORDER BY zona";
@@ -44,11 +44,11 @@
                                 <i class="fas fa-edit"></i> 
                             </button>      
                             <?php if($estado == 'I') { ?> 
-                            <button type="button" class="btn waves-effect waves-light btn-success  mb-1">
+                            <button type="button" class="btn waves-effect waves-light btn-success  mb-1" onclick="editar_estado(<?php echo $id_tarifario; ?>,'I')">
                                 <i class="fas fa-check"></i>
                             </button>
                             <?php } else {?> 
-                            <button type="button" class="btn waves-effect waves-light btn-danger  mb-1">
+                            <button type="button" class="btn waves-effect waves-light btn-danger  mb-1" onclick="editar_estado(<?php echo $id_tarifario; ?>,'A')">
                                 <i class="fas fa-ban"></i> 
                             </button>
                             <?php } ?>              

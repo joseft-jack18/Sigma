@@ -1,5 +1,7 @@
 <?php
 
+    date_default_timezone_set('America/Lima'); 
+
     $servername = "localhost";
     $database = "sigma_database";
     $username = "root";
