@@ -141,6 +141,15 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="tarifario.php" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Tarifario
+                <span class="right badge badge-danger">Nuevo</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
