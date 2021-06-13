@@ -21,19 +21,19 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="ape_paterno">Apellido Paterno</label>
-                        <input type="text" class="form-control" id="ape_paterno" placeholder="Apellido Paterno">
+                        <input type="text" class="form-control" id="ape_paterno" style="text-transform:uppercase;" placeholder="Apellido Paterno">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="ape_materno">Apellido Materno</label>
-                        <input type="text" class="form-control" id="ape_materno" placeholder="Apellido Materno">
+                        <input type="text" class="form-control" id="ape_materno" style="text-transform:uppercase;" placeholder="Apellido Materno">
                     </div>
                     <div class="form-group col-md-12">
                         <label for="nombres">Nombres</label>
-                        <input type="text" class="form-control" id="nombres" placeholder="Nombres">
+                        <input type="text" class="form-control" id="nombres" style="text-transform:uppercase;" placeholder="Nombres">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="usuario">Usuario</label>
-                        <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+                        <input type="text" class="form-control" id="usuario" style="text-transform:uppercase;" placeholder="Usuario">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="contraseña">Contraseña</label>

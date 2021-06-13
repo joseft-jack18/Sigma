@@ -131,8 +131,10 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-header">MANTENIMIENTO</li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="servicios.php" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Servicios
@@ -149,6 +151,16 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="usuarios.php" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Usuarios
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-header">LIQUIDACIONES</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
@@ -173,6 +185,8 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-header">REPORTES</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -202,14 +216,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="usuarios.php" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>
-              <p>
-                Usuarios
-              </p>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>

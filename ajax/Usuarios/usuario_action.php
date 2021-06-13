@@ -41,15 +41,15 @@
                         <td class="text-center"><?php echo utf8_encode($tipo); ?></td>
                         <td class="text-center"><?php if($estado == 'A'){ echo "ACTIVO"; } else { echo "INACTIVO"; } ?></td>
                         <td class="text-center">
-                            <button type="button" class="btn waves-effect waves-light btn-info  mb-1" onclick="editar_registro(<?php echo $id; ?>)" data-toggle="modal" data-target="#modal_usuario">
+                            <button type="button" class="btn waves-effect waves-light btn-info btn-sm mb-1" onclick="editar_registro(<?php echo $id; ?>)" data-toggle="modal" data-target="#modal_usuario">
                                 <i class="fas fa-edit"></i> 
                             </button>      
                             <?php if($estado == 'I') { ?> 
-                            <button type="button" class="btn waves-effect waves-light btn-success  mb-1" onclick="editar_estado(<?php echo $id; ?>,'I')">
+                            <button type="button" class="btn waves-effect waves-light btn-success btn-sm mb-1" onclick="editar_estado(<?php echo $id; ?>,'I')">
                                 <i class="fas fa-check"></i>
                             </button>
                             <?php } else {?> 
-                            <button type="button" class="btn waves-effect waves-light btn-danger  mb-1" onclick="editar_estado(<?php echo $id; ?>,'A')">
+                            <button type="button" class="btn waves-effect waves-light btn-danger btn-sm mb-1" onclick="editar_estado(<?php echo $id; ?>,'A')">
                                 <i class="fas fa-ban"></i> 
                             </button>
                             <?php } ?>              
