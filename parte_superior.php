@@ -40,6 +40,9 @@
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="plugins/toastr/toastr.min.css">
+
+  <link rel="stylesheet" href="dist/css/estilos.css">
+  
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -112,8 +115,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="dist/img/logoSig.png" alt="Logo Sigma" class="brand-image img-rectangle elevation-0" style="opacity: .8">
-      <span class="brand-text font-weight-light">SIGMA</span>
+      <img src="dist/img/logo.png" alt="Logo Sigma" class="brand-image img-rectangle elevation-0" style="opacity: .8">
+      <span class="brand-text font-weight-light">|</span>
     </a>
 
     <!-- Sidebar -->
