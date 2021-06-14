@@ -17,6 +17,45 @@
 CREATE DATABASE IF NOT EXISTS `sigma_database` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `sigma_database`;
 
+-- Dumping structure for table sigma_database.mae_servicio
+CREATE TABLE IF NOT EXISTS `mae_servicio` (
+  `cod_servicio` int(11) NOT NULL AUTO_INCREMENT,
+  `des_servicio` varchar(100) NOT NULL,
+  `fec_creacion` datetime NOT NULL,
+  `estado` varchar(1) NOT NULL,
+  PRIMARY KEY (`cod_servicio`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
+
+-- Dumping data for table sigma_database.mae_servicio: ~22 rows (approximately)
+/*!40000 ALTER TABLE `mae_servicio` DISABLE KEYS */;
+INSERT INTO `mae_servicio` (`cod_servicio`, `des_servicio`, `fec_creacion`, `estado`) VALUES
+	(1, 'ARMADO DE MUEBLES', '2021-06-12 23:37:37', 'A'),
+	(2, 'ARMADO DE MUEBLES COCINA', '2021-06-12 23:38:01', 'A'),
+	(3, 'INSTALACION CAMPANA/COCINA/HORNO', '2021-06-12 23:39:30', 'A'),
+	(4, 'INSTALACION THERMA', '2021-06-12 23:41:43', 'A'),
+	(5, 'INSTALACION RACKS', '2021-06-12 23:41:54', 'A'),
+	(6, 'INSTALACION PUERTAS', '2021-06-12 23:42:07', 'A'),
+	(7, 'INSTALACION CAMARA/PORTERO/ALARMA', '2021-06-12 23:42:24', 'A'),
+	(8, 'INSTALACION PUERTA DE DUCHA', '2021-06-12 23:42:38', 'A'),
+	(9, 'INSTALACION CORTINAS', '2021-06-13 01:00:38', 'A'),
+	(10, 'INSTALACION LUMINARIAS', '2021-06-13 01:22:24', 'A'),
+	(11, 'INSTALACION PARRILLAS', '2021-06-13 01:22:38', 'A'),
+	(12, 'INSTALACION PISOS', '2021-06-13 01:22:50', 'A'),
+	(13, 'INSTALACION INODORO/LAVADERO', '2021-06-13 01:23:09', 'A'),
+	(14, 'VISITA TECNICA PISOS', '2021-06-13 01:23:40', 'A'),
+	(15, 'VISITA TECNICA PUERTAS', '2021-06-13 01:24:02', 'A'),
+	(16, 'VISITA TECNICA AIRE ACONDICIONADO', '2021-06-13 01:24:14', 'A'),
+	(17, 'VISITA TECNICA CAMARA/PORTERO/ALARMA', '2021-06-13 01:24:42', 'A'),
+	(18, 'VISITA TECNICA INODORO/LAVADERO', '2021-06-13 01:24:59', 'A'),
+	(19, 'VISITA TECNICA TINA', '2021-06-13 01:25:11', 'A'),
+	(20, 'VISITA TECNICA CABINA DE DUCHA/PUERTA DE DUCHA', '2021-06-13 01:25:37', 'A'),
+	(21, 'VISITA TECNICA TANQUES/CISTERNAS/BIODIGESTOR', '2021-06-13 01:26:07', 'A'),
+	(22, 'VISITA TECNICA THERMAS/DUCHAS', '2021-06-13 01:26:24', 'A'),
+	(23, 'VISITA GRASS SINTETICO', '2021-06-13 01:26:40', 'A'),
+	(24, 'VISITA INSPECCION', '2021-06-13 01:26:56', 'A'),
+	(25, 'VISITA TECNICA LEVADIZO', '2021-06-13 01:27:14', 'A');
+/*!40000 ALTER TABLE `mae_servicio` ENABLE KEYS */;
+
 -- Dumping structure for table sigma_database.mae_tarifario
 CREATE TABLE IF NOT EXISTS `mae_tarifario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -27,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `mae_tarifario` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table sigma_database.mae_tarifario: ~0 rows (approximately)
+-- Dumping data for table sigma_database.mae_tarifario: ~17 rows (approximately)
 /*!40000 ALTER TABLE `mae_tarifario` DISABLE KEYS */;
 INSERT INTO `mae_tarifario` (`id`, `zona`, `precio`, `fec_creacion`, `estado`) VALUES
 	(1, 'ALGARROBAL - ILO', 15, '2021-06-13 04:08:37', 'A'),
@@ -68,10 +107,10 @@ CREATE TABLE IF NOT EXISTS `mae_usuario` (
 -- Dumping data for table sigma_database.mae_usuario: ~4 rows (approximately)
 /*!40000 ALTER TABLE `mae_usuario` DISABLE KEYS */;
 INSERT INTO `mae_usuario` (`id`, `nombres`, `ape_paterno`, `ape_materno`, `usuario`, `clave`, `tipo`, `estado`, `fec_creacion`) VALUES
-	(2, 'JOSE', 'JOSE', 'JOSE', 'joseft', '123456', 'Administrador', 'A', '2021-06-05 19:29:55'),
+	(2, 'JOSE', 'JOSE', 'LUIS', 'joseft', '123456', 'Administrador', 'A', '2021-06-05 19:29:55'),
 	(3, 'ORESTES', 'ORESTES', 'ORESTES', 'oramirez', '123456', 'Administrador', 'A', '2021-06-05 19:30:31'),
-	(4, 'ADMINISTRADOR', '', '', 'admin', '123456', 'Administrador', 'I', '2021-06-05 19:30:31'),
-	(5, 'JHOSMELL', 'ALFARO', 'MUSAJA', 'jhoselyn', '123456', 'Tecnico', 'I', '2021-06-08 06:10:30');
+	(4, 'ADMINISTRADOR', '', '', 'admin', '123456', 'Administrador', 'A', '2021-06-05 19:30:31'),
+	(5, 'JHOSMELL', 'ALFARO', 'MUSAJA', 'jhoselyn', '123456', 'Tecnico', 'A', '2021-06-08 06:10:30');
 /*!40000 ALTER TABLE `mae_usuario` ENABLE KEYS */;
 
 -- Dumping structure for table sigma_database.muestra
@@ -107,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `muestra` (
   `cantidad_reprogramacion` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table sigma_database.muestra: ~28 rows (approximately)
+-- Dumping data for table sigma_database.muestra: ~25 rows (approximately)
 /*!40000 ALTER TABLE `muestra` DISABLE KEYS */;
 INSERT INTO `muestra` (`sucursal`, `tip_proveedor`, `contrastista`, `tecnico`, `num_operacion`, `fec_operacion`, `num_os`, `num_documento`, `nom_cliente`, `ape_paterno`, `ape_materno`, `email_cliente`, `tel_comercial`, `tel_particular`, `tel_movil`, `dir_cliente`, `ref_direccion`, `distrito`, `provincia`, `servicio`, `producto`, `cantidad`, `fec_estimada`, `fec_programacion`, `fec_reprogramacion`, `turno`, `estado`, `observaciones`, `cantidad_reprogramacion`) VALUES
 	('521', 'PROPIO', 'SIGMA', '', '2110007897991', '', '568108', '20606026111', 'PRONEGOCIOS AVANZA MOQUEGUA S.A.C -', '', '', 'danielmaynas.95@gmail.com', '990060054', '990060054', '990060054', 'CALLE JUNIN 767-0- Interior:Moquegua', 'A espaldas de la Policía', 'Moquegua', 'Mariscal Nieto', '25874-ARMADO DE MUEBLE 2', '128526-ROPERO CAPRI C/ESPEJO NATURE', '1', '1970-01-01', '44330', '44331', 'Mañana', 'OS REPROGRAMADA', '', '1'),
